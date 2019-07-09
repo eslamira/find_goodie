@@ -1,3 +1,5 @@
+import 'package:find_goodie/ui/auth/login/Login.dart';
+import 'package:find_goodie/ui/auth/signup.dart';
 import 'package:find_goodie/ui/lib/carousel_pro/src/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
@@ -284,8 +286,8 @@ class _AnimationSplashLoginState extends State<AnimationSplashLogin> {
   Widget build(BuildContext context) {
     widget.animationController.addListener(() {
       if (widget.animation.isCompleted) {
-//        Navigator.of(context).pushReplacement(MaterialPageRoute(
-//            builder: (BuildContext context) => new loginScreen()));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => LoginScreen()));
       }
     });
     return AnimatedBuilder(
@@ -332,8 +334,8 @@ class _AnimationSplashSignupState extends State<AnimationSplashSignup> {
   Widget build(BuildContext context) {
     widget.animationController.addListener(() {
       if (widget.animation.isCompleted) {
-//        Navigator.of(context).pushReplacement(
-//            MaterialPageRoute(builder: (BuildContext context) => new Signup()));
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (BuildContext context) => Signup()));
       }
     });
     return AnimatedBuilder(
