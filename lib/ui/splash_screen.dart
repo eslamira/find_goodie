@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:find_goodie/ui/auth/main_auth.dart';
+import 'package:find_goodie/ui/intro/on_boarding.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -15,9 +17,12 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   /// To navigate layout change
-  void navigatorPage() {
-    Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (BuildContext context) => MainAuthScreen()));
+  void navigatorPage() async {
+    SharedPreferences _pref = await SharedPreferences.getInstance();
+    bool seen = _pref.getBool('seenIntro') ?? false;
+    Navigator.of(context).pushReplacement(MaterialPageRoute(
+        builder: (BuildContext context) =>
+            seen ? MainAuthScreen() : OnBoarding()));
   }
 
   /// Declare startTime to InitState

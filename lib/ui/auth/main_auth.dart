@@ -116,43 +116,14 @@ class _MainAuthScreenState extends State<MainAuthScreen>
                                 Center(
                                   /// Animation text treva shop accept from splashscreen layout (Click to open code)
                                   child: Hero(
-                                    tag: "Treva",
-                                    child: Text(
-                                      "Treva Shop",
-                                      style: TextStyle(
-                                        fontFamily: 'Sans',
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 32.0,
-                                        letterSpacing: 0.4,
-                                        color: Colors.white,
-                                      ),
+                                    tag: "FindGoodie",
+                                    child: Image.asset(
+                                      'assets/icons/logo_2x.png',
+                                      height: 185.0,
                                     ),
                                   ),
                                 ),
-
-                                /// Padding Text "Get best product in treva shop" (Click to open code)
-                                Padding(
-                                    padding: EdgeInsets.only(
-                                        left: 160.0,
-                                        right: 160.0,
-                                        top: mediaQuery.padding.top + 190.0,
-                                        bottom: 10.0),
-                                    child: Container(
-                                      color: Colors.white,
-                                      height: 0.5,
-                                    )),
-
-                                /// to set Text "get best product...." (Click to open code)
-                                Text(
-                                  "Get best product in treva shop",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 17.0,
-                                      fontWeight: FontWeight.w200,
-                                      fontFamily: "Sans",
-                                      letterSpacing: 1.3),
-                                ),
-                                Padding(padding: EdgeInsets.only(top: 250.0)),
+                                Padding(padding: EdgeInsets.only(top: 350.0)),
                               ],
                             ),
                           ),
